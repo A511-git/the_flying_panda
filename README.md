@@ -3,8 +3,8 @@
 A mini internal tool to track visa slot alerts for different countries and cities.
 
 ---
-## Deployed URL
-https://the-flying-panda-mohammad-atif.vercel.app
+## Frontend URL
+https://the-flying-panda-mohammad-atif.vercel.app/alerts
 ---
 ## Scenario
 
@@ -104,16 +104,21 @@ Each alert contains:
 
 ## Design Decisions
 
-- MongoDB for flexibility
+- MongoDB for flexible schema and fast iteration
+- Compound and fallback indexes for faster filtered reads
+  - Compound index on `visaType + status`
+  - Fallback index on `status`
 - Server-side pagination for scalability
-- Explicit update actions
-- Layered backend architecture
-- Simple and clear UI
+- Explicit update actions to avoid accidental writes
+- Layered backend architecture (validator → service → repository)
+- Centralized error handling
+- Simple and clear UI focused on usability
 
-Architecture & flow:
-https://whimsical.com/architecture-overview-and-specification-VqabDux9BSabmsDbuEs2xC
+## Architecture & Flow
 
----
+- Specifications and design flow documented here:
+  - https://whimsical.com/architecture-overview-and-specification-VqabDux9BSabmsDbuEs2xC
+
 
 ## Backend Toolkit
 
