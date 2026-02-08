@@ -4,7 +4,7 @@ A mini internal tool to track visa slot alerts for different countries and citie
 
 ---
 ## Frontend URL
-https://the-flying-panda-mohammad-atif.vercel.app/alerts
+https://the-flying-panda-mohammad-atif.vercel.app
 ---
 ## Scenario
 
